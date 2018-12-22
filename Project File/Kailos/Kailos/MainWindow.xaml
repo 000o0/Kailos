@@ -1,0 +1,73 @@
+﻿<Window x:Class="MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kailos"
+        mc:Ignorable="d"
+        Title="Kailos" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/Icon_Kailos.ico">
+    <Grid>
+        <materialDesign:Card Height="50" Background="BlueViolet">
+            <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" FontSize="25" FontFamily="./Resources/#Metropolis Regular" Foreground="White">Kailos - ARP Tool</TextBlock>
+        </materialDesign:Card>
+
+        <materialDesign:Card Height="65" Width="300" HorizontalAlignment="Left" Margin="15,65,0,0">
+            <Grid>
+                <TextBlock VerticalAlignment="Top"  FontSize="18" Margin="5,5,0,0" FontFamily="./Resources/#Metropolis Regular" Foreground="Black">1. Set Your Network DEVICE</TextBlock>
+                
+                <ComboBox Name="MyNetworkDeviceBox" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="280" Margin="6,0,0,6">
+                    
+                </ComboBox>
+                
+            </Grid>
+        </materialDesign:Card>
+
+
+        <materialDesign:Card Height="129" Width="300" HorizontalAlignment="Left" Margin="15,145,0,0">
+            <Grid>
+                <TextBlock VerticalAlignment="Top"  FontSize="18" Margin="5,5,0,0" FontFamily="./Resources/#Metropolis Regular" Foreground="Black">2. Set Target DEVICE</TextBlock>
+                
+                <TextBox Name="TargetIPAddress" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,30,0,0" Width="280">IP Address</TextBox>
+                <TextBox Name="TargetMACAddress" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,65,0,0" Width="280">MAC Address</TextBox>
+                <Button Name="DownloadIPScanner" Height="25" Width="186" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5" FontFamily="./Resources/#Metropolis Regular" FontSize="18">IP Scanner Download</Button>
+
+            </Grid>
+        </materialDesign:Card>
+
+
+        <materialDesign:Card Height="110" Width="300" HorizontalAlignment="Left" Margin="15,290,0,0">
+            <Grid>
+                <TextBlock VerticalAlignment="Top"  FontSize="18" Margin="5,5,0,0" FontFamily="./Resources/#Metropolis Regular" Foreground="Black">3. Set Wi-Fi Gateway IP, Attacker MAC</TextBlock>
+
+                <TextBox Name="GatewayIPAddress" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,35,0,0" Width="280">Gateway IP Address</TextBox>
+                <TextBox Name="AttackerMACAddress" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,70,0,0" Width="280">Attacker MAC Address</TextBox>
+                
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Width="440" Height="209" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,65,15,0">
+            <Grid>
+                <Label>
+                    <Label.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="Resources/BackgroundAst2.png"/>
+                    </Label.Background>
+                </Label>
+                
+                <TextBlock VerticalAlignment="Top"  FontSize="18" Margin="5,5,0,0" FontFamily="./Resources/#Metropolis Regular" Foreground="White">Program Info<LineBreak/><LineBreak/>This program is a Wifi device paralysis program using<LineBreak/>ARP vulnerability, and 'Winpcap' must be installed on the PC.</TextBlock>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Width="440" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,290,15,0">
+            <materialDesign:Card.Background>
+                <ImageBrush ImageSource="Resources/BackgroundAst.jpg" Stretch="UniformToFill"/>
+            </materialDesign:Card.Background>
+            
+            <Grid>
+                <TextBlock VerticalAlignment="Top"  FontSize="18" Margin="5,5,0,0" FontFamily="./Resources/#Metropolis Regular" Foreground="White">4. Start the Attack</TextBlock>
+                <Button Name="SwitchButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="80" Height="30" Margin="0,0,10,10">Start</Button>
+            </Grid>
+        </materialDesign:Card>
+
+    </Grid>
+</Window>
